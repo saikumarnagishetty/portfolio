@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Kumar Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="spaceCanvas"></canvas>
+
+    <!-- Stars Background -->
+    <div id="stars"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor">SK</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            saikumar@linuxmint:~$
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+
+            <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
+
+            <li><a href="#" onclick="showSection('education')">Education</a></li>
+
+            <li><a href="#" onclick="showSection('terminal')">Terminal</a></li>
+
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HOME -->
+
+    <section id="home" class="content-section active">
+
+        <div class="hero">
+
+            <h1>Nagishetty Sai Kumar</h1>
+
+            <h2 id="typing-text"></h2>
+
+            <div class="hero-buttons">
+
+                <button onclick="showSection('projects')">
+                    View Projects
+                </button>
+
+            
+
+            </div>
+   <div class="clock-card">
+
+       <h4>🇮🇳 IST</h4>
+
+        <h2 id="time">00:00:00</h2>
+
+        <p id="date">Loading...</p>
+
+      </div>
+
+    </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="content-section">
+
+        <div class="card">
+
+            <h2>About Me</h2>
+
+            <p>
+                Computer Science Engineering student at Amity University Rajasthan 
+                with a strong foundation in Python, Linux, and software development.</p>
+               <p>  Actively seeking internship and entry-level opportunities</p> 
+                 <p>to apply technical skills, gain industry experience, and contribute to meaningful projects.</p>
+                 <p> Passionate about continuous learning, problem solving, and building practical software solutions.</p>
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills" class="content-section">
+
+        <h2 class="section-title">Skills</h2>
+
+        <div class="grid">
+
+            <div class="skill-card">Python</div>
+
+            <div class="skill-card">C++</div>
+
+            <div class="skill-card">HTML</div>
+
+            <div class="skill-card">CSS</div>
+
+            <div class="skill-card">Linux</div>
+
+            <div class="skill-card">Git</div>
+
+            <div class="skill-card">DSA</div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="content-section">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="grid">
+
+            <div class="project-card">
+
+                <h3>Voice Assistant</h3>
+
+                <p>
+                    Python based voice assistant using speech recognition
+                    and text-to-speech technologies.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Random Password Generator</h3>
+
+                <p>
+                    Generates strong passwords using uppercase,
+                    lowercase, numbers and symbols.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>BMI Calculator</h3>
+
+                <p>
+                    Calculates Body Mass Index and displays
+                    health categories.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications" class="content-section">
+
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="grid">
+
+            <div class="certificate-card">
+
+                <h3>Python Programming Internship</h3>
+
+                <p>Oasis Infobyte</p>
+                 <a
+                href="{{ url_for('static', filename='certificates/oasis_certificate.pdf') }}"
+                target="_blank"
+                class="cert-btn">
+
+                View Certificate
+
+            </a>
+
+
+            </div>
+
+            <div class="certificate-card">
+
+                <h3>Internet of Things Internship</h3>
+
+                <p>Emertxe</p>
+
+                 <a
+                href="{{ url_for('static', filename='certificates/emertxe_certificate.pdf') }}"
+                target="_blank"
+                class="cert-btn">
+
+                View Certificate
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education" class="content-section">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-card">
+
+                <h3>2024 - Present</h3>
+
+                <p>B.Tech Computer Science Engineering</p>
+
+                <p>Amity University Rajasthan</p>
+
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>2022 - 2024</h3>
+
+                <p>Senior Secondary</p>
+
+                <p>Gravity Junior College</p>
+
+            </div>
+
+            <div class="timeline-card">
+
+                <h3>2022</h3>
+
+                <p>Secondary School</p>
+
+                <p>Laser Techno School</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TERMINAL -->
+
+    <section id="terminal" class="content-section">
+
+        <div class="terminal-box">
+
+            <div class="terminal-header">
+
+                ● ● ●
+
+            </div>
+
+            <div id="terminal-output">
+
+                <p>
+                    saikumar@linuxmint:~$ help
+                </p>
+
+            </div>
+
+            <input
+                type="text"
+                id="terminal-input"
+                placeholder="Type command..."
+            >
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="content-section">
+
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-links">
+
+            <a href="https://github.com/saikumarnagishetty"
+               target="_blank">
+               GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/saikumarnagishetty"
+               target="_blank">
+               LinkedIn
+            </a>
+
+            <a href="mailto:nagishettysaikumarpatel@gmail.com">
+               Email
+            </a>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
